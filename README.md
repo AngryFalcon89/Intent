@@ -92,3 +92,37 @@ Finally, use startActivity(intent) to initiate the explicit intent and pass the 
 ```kotlin
 startActivity(intent)
 ```
+
+### Step 6: Start the Activity with Intent
+Finally, use startActivity(intent) to initiate the explicit intent and pass the user data to the OtherActivity.
+
+```kotlin
+startActivity(intent)
+```
+### Step 7: Destructure and Display Data
+In the OtherActivity, retrieve the user data from the intent and destructure it to display the values:
+
+```kotlin
+var userData = intent.getSerializableExtra("USER_DATA") as UserData
+
+binding.name.text = userData.name
+binding.age.text = userData.age.toString()
+binding.phone.text = userData.phone
+binding.email.text = userData.email
+```
+
+### NOTE 
+The following functions were deprecated in Android 13:
+- Intent.getParcelableExtra()
+- Intent.getSerializableExtra()
+- Bundle.getParcelable()
+- Bundle.getParcelableArrayList()
+- Bundle.getSerializable()
+hence we use this code 
+```kotlin
+if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+   model = intent.getSerializableExtra("USER_DATA",OtherActivity::class.java)
+} else {
+   model = intent.getSerializableExtra("USER_DATA") as UserData?
+}
+```
