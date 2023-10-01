@@ -5,8 +5,8 @@
 
 Intents are a fundamental component in Android app development, facilitating communication between different parts of an app or between different apps.<br>
 There are two primary types of intents:
--Implicit Intent
--Explicit Intent
+- Implicit Intent
+- Explicit Intent
 
 ---
 
