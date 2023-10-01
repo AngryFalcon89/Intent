@@ -56,7 +56,7 @@ val intent = Intent(this@MainActivity, OtherActivity::class.java)
 ```
 
 ### Step 3: Create a Serializable Class
-Create a Serializable class that represents the user data you want to transfer. Make sure it implements the Serializable interface:
+Create a Serializable class that represents the user data you want to transfer. Make sure it implements the Serializable interface because intents cannot pass Objects of normal class unless it is Serialisable or parcelable:
 
 ```kotlin
 import java.io.Serializable
@@ -118,7 +118,7 @@ The following functions were deprecated in Android 13:
 - Bundle.getParcelable()
 - Bundle.getParcelableArrayList()
 - Bundle.getSerializable()
-hence we use this code 
+<br> hence we use this code 
 ```kotlin
 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
    model = intent.getSerializableExtra("USER_DATA",OtherActivity::class.java)
