@@ -1,5 +1,6 @@
 # Intent
-                                     ![preview](https://github.com/AngryFalcon89/Intent/assets/91687355/2633cd37-f644-4825-82c7-3dc79d6a06cb)
+
+![preview](https://github.com/AngryFalcon89/Intent/assets/91687355/2633cd37-f644-4825-82c7-3dc79d6a06cb)
 
 Intents are a fundamental component in Android app development, facilitating communication between different parts of an app or between different apps.<br>
 There are two primary types of intents:
